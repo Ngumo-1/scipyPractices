@@ -3,18 +3,18 @@ from optimize import minimizeFunc
 from interpolate import linear_interp, cubic_interp, quadratic_interp
 import matplotlib.pyplot as plt
 
-# def eqn(params, args):
-#     a,b,c,d,e,f=params
-#     x,y=args
-#     return a * x**2 + b * y**2 + c * x * y + d * x + e * y + f
-#
-# args=(1, 2)
-#
-# initial_guess=[0,0,0,0,0,0]
-#
-# optimized_constants=minimizeFunc(eqn, initial_guess, args)
-#
-# print("Optimized constants: ", optimized_constants)
+def eqn(params, args):
+    a,b,c,d,e,f=params
+    x,y=args
+    return a * x**2 + b * y**2 + c * x * y + d * x + e * y + f
+
+args=(1, 2)
+
+initial_guess=[0,0,0,0,0,0]
+
+optimized_constants=minimizeFunc(eqn, initial_guess, args)
+
+print("Optimized constants: ", optimized_constants)
 
 x = np.linspace(0, 10, 10)
 y = np.sin(x) + np.random.normal(0, 0.2, len(x))
